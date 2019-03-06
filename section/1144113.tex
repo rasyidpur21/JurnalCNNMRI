@@ -1,0 +1,13 @@
+\section{CNN-Brain/MRI}
+\cite{robertson2019exploring}
+\begin{enumerate}
+\item Paper Title : Exploring Spectro-Temporal Features In End-To-End Convolutional Neural Networks
+\item Authors :  Sean Robertson, Gerald Penn and Yingxue Wang
+\item Journal : journal =  arXiv preprint arXiv:1901.00072,year = 2019
+\item Problem : Sebuah input standar yang bernama f-banks menggunakan konsep Convolutional Neural Networks end-to-end yang berfungsi untuk pengenalan suara namun tidak menghasilkan perbaikan yang siginifikan pada tingkat kesalahan telepon dan  konsekuensinya sehubungan dengan bank filter yang diteliti.
+\item Contribution : 
+\subitem Menyajikan modifikasi dari penelitian diatas untuk fitur bicara (pengenalan suara) secara rinci. Fitur-fitur bicara yang lebih tradisional, tersedia secara open source disertai dengan paket python 2 melalui repository Matlab sumber terbuka COVAREP
+\subitem Mengevaluasi secara terpisah bagaimana adaptasi penelitian ini denga topik pengenalan end-to-end dan membangun CNN dari arsitektur dijelaskan dalam pengenalan TIMIT.
+\item Method/Solution : Analisis frekuensi waktu bicara telah menjadi representasi fitur dominan untuk pengenalan ucapan. Metode yang digunakan pada penelitian ini adalah STFT (Short-Time Fourier Transform). Proses turunannya memperlakukan sinyal ucapan sebagai serangkaian proses diam berjendela. Meski saraf arsitektur telah terbukti mampu memproses sinyal ucapan mentah, mereka cenderung membutuhkan lebih banyak data, rata-rata agresif di seluruh filter yang dipelajari, dan itupun masih mendapat manfaat dari beberapa inisialisasi berbasis filter. Terbaik hasil pada dataset patokan, seperti TIMIT, masih dicapai dengan filter log berskala Mel, berskala tumpang tindih - "f-bank". F-bank pasca-proses STFT dengan mengisolasi dan mengintegrasikan lebih dari band daya yang berbeda spektrum. Asumsi stasioner dari STFT dikombinasikan dengan filter celah-celah yang dibuat dengan sangat baik representasi frekuensi waktu yang kuat dari sinyal bicara.
+\item Main Results :Uji Friedman tidak menunjukkan perbedaan yang signifikan antara distribusi PER di seluruh fitur kaldifb, f-bank, g-bank, dan nada-bank (Q = 5,93, p = 0,12). Tes peringkat bertanda Wilcoxon tidak menemukan perbedaan yang signifikan antara distribusi PER di seluruh fitur f-bank dan sif-bank (W = 13, p = 0,26). Oleh karena itu, dapat disimpulkan bahwa satu representasi fitur mengarah ke PER rata-rata yang lebih baik secara keseluruhan.
+\item Limitation : Pendekatan fitur bicara atau pengenalan suara menggunakan STFT yang dijelaskan dalam pengenalan TIMIT
